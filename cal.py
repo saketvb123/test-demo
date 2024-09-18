@@ -1,28 +1,19 @@
+def calculate_area(radius):
+    area = 3.14 * radius ** 2
+    unused_variable = 42  # Unused variable
+    return area
 
+def main():
+    RADIUS = 5  # Constants should be in uppercase
+    area = calculate_area(RADIUS)
+    print("Area:", area)
 
-def calculator():
-    print("Select operation:")
-    print("1. Add")
-    print("2. Subtract")
-    print("3. Multiply")
-    print("4. Divide")
-
-    while True:
-        choice = input("Enter choice (1/2/3/4): ")
-
-            if choice == '1':
-                print(f"{num1} + {num2} = {add(num1, num2)}")
-            elif choice == '2':
-                print(f"{num1} - {num2} = {subtract(num1, num2)}")
-            elif choice == '3':
-                print(f"{num1} * {num2} = {multiply(num1, num2)}")
-            elif choice == '4':
-                print(f"{num1} / {num2} = {divide(num1, num2)}")
-        else:
-            print("Invalid input. Please enter a number between 1 and 4.")
-
-        if next_calculation.lower() != 'yes':
-            break
+    # Poor error handling: catching a broad exception
+    try:
+        result = 10 / 0  # This will cause a ZeroDivisionError
+    except Exception as e:
+        print("An error occurred:", e)
 
 if __name__ == "__main__":
-    calculator()
+    main()
+
