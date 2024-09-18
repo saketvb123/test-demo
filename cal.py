@@ -37,7 +37,6 @@ def calculator():
         else:
             print("Invalid input. Please enter a number between 1 and 4.")
 
-        next_calculation = input("Do you want to perform another calculation? (yes/no): ")
         if next_calculation.lower() != 'yes':
             break
 
